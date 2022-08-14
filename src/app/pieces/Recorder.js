@@ -1,16 +1,9 @@
-import {
-	Box,
-	Button,
-	Card,
-	CardContent,
-	SliderInput,
-	TextField,
-} from "@mui/material";
-import { Container } from "@mui/system";
-import Stack from "@mui/material/Stack";
-import Slider from "@mui/material/Slider";
 import VolumeDown from "@mui/icons-material/VolumeDown";
 import VolumeUp from "@mui/icons-material/VolumeUp";
+import { Box, Button, Card, CardContent, TextField } from "@mui/material";
+import Slider from "@mui/material/Slider";
+import Stack from "@mui/material/Stack";
+import { Container } from "@mui/system";
 import * as React from "react";
 
 import * as Tone from "tone";
@@ -108,16 +101,3 @@ const Recorder = React.memo(function Recorder() {
 });
 
 export default Recorder;
-
-const AudioPlayer = React.memo(function AudioPlayer({ audioUrl, playerRef }) {
-	return (
-		<Box>
-			<audio
-				ref={playerRef}
-				style={classes.playerShow}
-				src={audioUrl}
-				controls
-			/>
-		</Box>
-	);
-});
